@@ -1,0 +1,9 @@
+---
+ - name: rambo services start
+   hosts: all
+   tasks:
+    - name: general scripts for ramins
+      yum: name=httpd state=present
+    - service: name=httpd state=started enabled=yes
+    - file: dest=/var/www/html/rams.html state=touch
+    - lineinfile: dest=/var/www/html/rams.html line='iam rambo rams'
