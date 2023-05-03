@@ -1,2 +1,6 @@
-rambabu
-vizah
+---
+ - name: rambo services start
+   hosts: all
+   tasks:
+    - name: servers check pinging
+      ping:
