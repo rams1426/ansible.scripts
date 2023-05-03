@@ -1,0 +1,7 @@
+---
+ - name: rambo services start
+   hosts: all
+   tasks:
+    - name: package installation
+      yum: name=httpd state=present
+    - service: name=httpd state=started enabled=yes
