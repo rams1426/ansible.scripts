@@ -1,9 +1,6 @@
 ---
- - name: rambo services start
-   hosts: all
+ - name: my file copy
+   hosts: vlab
    tasks:
-    - name: general scripts for ramins
-      yum: name=httpd state=present
-    - service: name=httpd state=started enabled=yes
-    - file: dest=/var/www/html/rams.html state=touch
-    - lineinfile: dest=/var/www/html/rams.html line='iam rambo rams'
+    - name: copy the data one to another location
+      copy: src=/etc/fstab dest=/tmp/fstab_bkp
