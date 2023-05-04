@@ -1,0 +1,11 @@
+- - -
+  - name: debug-msg
+    hosts: vlab
+     - debug:msg="my ansible scripts"
+            
+            or 
+            
+  - hosts: vlab
+    tasks:
+     - debug:
+        msg: "welcome to git hub"
